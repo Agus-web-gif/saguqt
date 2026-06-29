@@ -24,16 +24,18 @@ body {
     color: var(--text-main);
     font-family: var(--font-main);
     line-height: 1.6;
-    overflow-x: hidden; /* Mencegah layar bisa digeser ke kanan-kiri di HP */
+    overflow-x: hidden;
 }
 
-/* Navbar dengan Gaya Grafiti & Neon */
+/* =======================================================
+   NAVIGASI & LOGIN - TAMPILAN ASLI LAPTOP
+   ======================================================= */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #11141c;
-    padding: 20px 5%;
+    padding: 15px 5%;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -48,12 +50,13 @@ nav {
     text-decoration: none;
     text-shadow: 3px 3px 0px var(--secondary-neon), 0 0 10px rgba(0, 255, 204, 0.6);
     letter-spacing: 2px;
+    display: inline-block;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
 }
 
@@ -72,21 +75,31 @@ nav {
     transform: scale(1.05);
 }
 
+/* FIXING TOMBOL LOGIN BIAR KOKOH & GAK ANCUR */
 .btn-login {
+    display: inline-block;
     background: var(--primary-neon) !important;
     color: #000 !important;
-    padding: 5px 20px;
-    border-radius: 5px;
+    font-family: var(--font-graffiti) !important;
+    font-size: 16px !important;
+    padding: 8px 24px !important;
+    border-radius: 6px;
+    text-decoration: none;
     box-shadow: 0 0 10px var(--primary-neon);
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 .btn-login:hover {
     background: var(--secondary-neon) !important;
     color: #fff !important;
     box-shadow: 0 0 15px var(--secondary-neon) !important;
+    transform: scale(1.05);
 }
 
-/* Hero Section */
+/* =======================================================
+   KONTEN UTAMA LAPTOP (NORMAL & MEGAH)
+   ======================================================= */
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -110,7 +123,6 @@ nav {
     margin: 0 auto;
 }
 
-/* Main Grid & Container */
 .container {
     max-width: 1200px;
     margin: 40px auto;
@@ -126,13 +138,13 @@ nav {
     letter-spacing: 2px;
 }
 
+/* Grid Game */
 .grid-games {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 25px;
 }
 
-/* Game Card Gahar */
 .game-card {
     background: var(--panel-bg);
     border-radius: 12px;
@@ -171,7 +183,7 @@ nav {
     color: #fff;
 }
 
-/* Form Topup Area */
+/* Topup Container */
 .topup-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -192,7 +204,10 @@ nav {
     letter-spacing: 1px;
 }
 
-/* Input Fields */
+.form-group {
+    margin-bottom: 15px;
+}
+
 .form-group input {
     width: 100%;
     padding: 14px;
@@ -210,7 +225,7 @@ nav {
     box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
 }
 
-/* Item Pilihan Diamond */
+/* Grid Nominal */
 .grid-nominal {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -230,11 +245,14 @@ nav {
 .nominal-item strong {
     font-size: 16px;
     color: #fff;
+    display: block;
 }
 
 .nominal-item small {
     color: var(--primary-neon);
     font-weight: bold;
+    display: block;
+    margin-top: 5px;
 }
 
 .nominal-item:hover {
@@ -248,7 +266,6 @@ nav {
     box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
 }
 
-/* Tombol Order Jalanan/Grafiti */
 .btn-order {
     width: 100%;
     background: linear-gradient(135deg, var(--secondary-neon), #b3003b);
@@ -265,12 +282,7 @@ nav {
     transition: 0.2s;
 }
 
-.btn-order:hover {
-    transform: scale(1.02);
-    box-shadow: 0 0 25px rgba(255, 0, 85, 0.7);
-}
-
-/* Modal Login Gelap */
+/* Modal & Footer */
 .modal {
     display: none;
     position: fixed;
@@ -290,22 +302,8 @@ nav {
     width: 90%;
     max-width: 400px;
     position: relative;
-    box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
 }
 
-.close-btn {
-    position: absolute;
-    top: 15px; right: 20px;
-    font-size: 28px;
-    color: var(--text-muted);
-    cursor: pointer;
-}
-
-.close-btn:hover {
-    color: var(--secondary-neon);
-}
-
-/* Footer */
 footer {
     text-align: center;
     padding: 40px;
@@ -313,59 +311,73 @@ footer {
     color: var(--text-muted);
     margin-top: 60px;
     border-top: 2px solid #161922;
-    font-size: 14px;
 }
 
+
 /* =======================================================
-   KODE SAKTI RESPONSIVE MEDIA QUERY (SUPAYA AUTO RAPI DI HP)
+   KODE OTOMATIS KHUSUS HP (TIDAK AKAN MERUSAK LAPTOP)
    ======================================================= */
 @media (max-width: 768px) {
-    /* Navbar menyesuaikan layar HP vertikal */
     nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px;
-        text-align: center;
+        flex-direction: column; 
+        padding: 15px 10px;      
+        gap: 12px;               
+    }
+    
+    .logo a {
+        font-size: 26px;         
+        text-shadow: 2px 2px 0px var(--secondary-neon);
     }
     
     .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        flex-wrap: wrap;         
+        justify-content: center; 
+        gap: 15px;              
     }
 
-    /* Ukuran font tulisan grafiti di HP dikecilkan sedikit */
+    .nav-links a {
+        font-size: 15px;         
+    }
+
+    /* Penyesuaian Tombol Login Khusus Layar HP */
+    .btn-login {
+        padding: 6px 18px !important;       
+        font-size: 14px !important;   
+        margin-top: 5px;      
+    }
+
+    .hero {
+        padding: 40px 15px;
+    }
+
     .hero h1 { 
-        font-size: 2.2rem; 
+        font-size: 2.0rem;      
     }
-    
-    /* Layout kolom kiri-kanan otomatis numpuk atas-bawah */
+
     .topup-container { 
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    /* Ukuran panel dikurangi padding-nya di HP */
     .panel {
-        padding: 20px;
+        padding: 20px;           
     }
 
-    /* Grid layout katalog game otomatis pas di layar HP */
     .grid-games {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
         gap: 15px;
     }
 
     .game-card img {
-        height: 140px; /* Tinggi gambar dikecilkan agar pas */
+        height: 140px;           
     }
 
-    /* Grid pilihan nominal/diamond di HP */
     .grid-nominal {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); 
         gap: 10px;
     }
 
     .nominal-item {
-        padding: 12px 8px;
+        padding: 12px 5px;       
     }
 }
