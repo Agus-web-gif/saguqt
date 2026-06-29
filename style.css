@@ -1,0 +1,371 @@
+/* Import Font Grafiti dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #0d0e12;       /* Hitam Pekat */
+    --panel-bg: #161922;      /* Abu-abu Gelap */
+    --primary-neon: #00ffcc;  /* Hijau/Teal Neon */
+    --secondary-neon: #ff0055;/* Pink/Merah Neon */
+    --text-main: #ffffff;     /* Putih */
+    --text-muted: #a0aec0;    /* Abu-abu Pudar */
+    --font-graffiti: 'Permanent Marker', cursive;
+    --font-main: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden; /* Mencegah layar bisa digeser ke kanan-kiri di HP */
+}
+
+/* Navbar dengan Gaya Grafiti & Neon */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #11141c;
+    padding: 20px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--secondary-neon);
+    box-shadow: 0 0 15px rgba(255, 0, 85, 0.4);
+}
+
+.logo a {
+    font-family: var(--font-graffiti);
+    font-size: 32px;
+    color: var(--primary-neon);
+    text-decoration: none;
+    text-shadow: 3px 3px 0px var(--secondary-neon), 0 0 10px rgba(0, 255, 204, 0.6);
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: var(--font-graffiti);
+    font-size: 18px;
+    color: var(--text-main);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-neon);
+    text-shadow: 0 0 8px var(--secondary-neon);
+    transform: scale(1.05);
+}
+
+.btn-login {
+    background: var(--primary-neon) !important;
+    color: #000 !important;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--primary-neon);
+}
+
+.btn-login:hover {
+    background: var(--secondary-neon) !important;
+    color: #fff !important;
+    box-shadow: 0 0 15px var(--secondary-neon) !important;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: radial-gradient(circle, #1a1d29 0%, #0d0e12 100%);
+    border-bottom: 1px solid #222;
+}
+
+.hero h1 {
+    font-family: var(--font-graffiti);
+    font-size: 3.5rem;
+    color: #fff;
+    text-shadow: 4px 4px 0px var(--secondary-neon);
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Main Grid & Container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-family: var(--font-graffiti);
+    font-size: 28px;
+    color: var(--primary-neon);
+    text-shadow: 2px 2px 0px #000;
+    margin-bottom: 25px;
+    letter-spacing: 2px;
+}
+
+.grid-games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+/* Game Card Gahar */
+.game-card {
+    background: var(--panel-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid #252936;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-neon);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: brightness(0.85);
+    transition: 0.3s;
+}
+
+.game-card:hover img {
+    filter: brightness(1);
+}
+
+.game-card h4 {
+    font-family: var(--font-graffiti);
+    font-size: 18px;
+    padding: 15px 10px;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Form Topup Area */
+.topup-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+
+.panel {
+    background: var(--panel-bg);
+    padding: 30px;
+    border-radius: 12px;
+    border: 2px solid #252936;
+}
+
+.panel h2, .panel h3 {
+    font-family: var(--font-graffiti);
+    color: var(--primary-neon);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Input Fields */
+.form-group input {
+    width: 100%;
+    padding: 14px;
+    background: #0d0e12;
+    border: 2px solid #252936;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--secondary-neon);
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
+}
+
+/* Item Pilihan Diamond */
+.grid-nominal {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.nominal-item {
+    background: #0d0e12;
+    border: 2px solid #252936;
+    padding: 20px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.nominal-item strong {
+    font-size: 16px;
+    color: #fff;
+}
+
+.nominal-item small {
+    color: var(--primary-neon);
+    font-weight: bold;
+}
+
+.nominal-item:hover {
+    border-color: var(--primary-neon);
+    background: #121824;
+}
+
+.nominal-item.active {
+    border-color: var(--secondary-neon);
+    background: #1c121a;
+    box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
+}
+
+/* Tombol Order Jalanan/Grafiti */
+.btn-order {
+    width: 100%;
+    background: linear-gradient(135deg, var(--secondary-neon), #b3003b);
+    color: white;
+    font-family: var(--font-graffiti);
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
+    transition: 0.2s;
+}
+
+.btn-order:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(255, 0, 85, 0.7);
+}
+
+/* Modal Login Gelap */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: var(--panel-bg);
+    border: 3px solid var(--primary-neon);
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 28px;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: var(--secondary-neon);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #0d0e12;
+    color: var(--text-muted);
+    margin-top: 60px;
+    border-top: 2px solid #161922;
+    font-size: 14px;
+}
+
+/* =======================================================
+   KODE SAKTI RESPONSIVE MEDIA QUERY (SUPAYA AUTO RAPI DI HP)
+   ======================================================= */
+@media (max-width: 768px) {
+    /* Navbar menyesuaikan layar HP vertikal */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Ukuran font tulisan grafiti di HP dikecilkan sedikit */
+    .hero h1 { 
+        font-size: 2.2rem; 
+    }
+    
+    /* Layout kolom kiri-kanan otomatis numpuk atas-bawah */
+    .topup-container { 
+        grid-template-columns: 1fr; 
+    }
+
+    /* Ukuran panel dikurangi padding-nya di HP */
+    .panel {
+        padding: 20px;
+    }
+
+    /* Grid layout katalog game otomatis pas di layar HP */
+    .grid-games {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 15px;
+    }
+
+    .game-card img {
+        height: 140px; /* Tinggi gambar dikecilkan agar pas */
+    }
+
+    /* Grid pilihan nominal/diamond di HP */
+    .grid-nominal {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 10px;
+    }
+
+    .nominal-item {
+        padding: 12px 8px;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Diamond - saguqt.id</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">✨ saguqt.id</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="topup.html">Top Up Diamond</a></li>
+            <li><a href="joki.html">Joki Magic Chess</a></li>
+            <li><a href="jb-akun.html">Jual Beli Akun</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="#" class="btn-login" id="loginBtn">Login</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" style="margin-top: 40px;">
+        <main class="container" style="margin-top: 40px;">
+        <div class="topup-container">
+            
+            <div class="left-column">
+                <div class="panel">
+                    <img src="deidara.jpg" alt="Banner Game" style="width:100%; border-radius:10px; margin-bottom:15px;">
+                    <h2>Pilih Game</h2>
+                    <p style="font-size: 14px; color: #777; margin-top: 10px;">
+                        Silakan pilih game terlebih dahulu dari halaman beranda.
+                    </p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                
+                <div class="panel">
+                    <h3>1. Masukkan Data Akun</h3>
+                    <div class="form-group" style="display: flex; gap: 10px;">
+                        <input type="number" id="userId" placeholder="Masukkan User ID" required>
+                        <input type="number" id="zoneId" placeholder="(Zone ID)" style="max-width: 120px;" required>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>2. Pilih Nominal</h3>
+                    <div class="grid-nominal">
+                        </div>
+                </div>
+
+                <button class="btn-order" onclick="processOrder()">Beli Sekarang</button>
+
+            </div>
+        </div>
+    </main>
+    </main>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 style="margin-bottom: 20px; color: var(--primary);">Login Akun</h2>
+            <form id="formLogin">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label>Email / Username</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit" class="btn-order">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 saguqt.id. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Kami | saguqt.id</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">✨ saguqt.id</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="topup.html?game=mlbb">Top Up Diamond</a></li>
+            <li><a href="joki.html">Joki Magic Chess</a></li>
+            <li><a href="jb-akun.html">Jual Beli Akun</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="#" class="btn-login" id="loginBtn">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="container" style="margin-top: 40px;">
+        <div class="topup-container">
+            
+            <!-- Kiri: Info Sosial Media Admin -->
+            <div class="left-column">
+                <div class="panel" style="margin-bottom: 20px;">
+                    <h2>Hubungi Admin</h2>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 25px;">
+                        Punya kendala saat top up, joki, atau transaksi akun? Hubungi media sosial resmi **saguqt.id** di bawah ini. CS kami siap melayani Lu 24/7, Bang!
+                    </p>
+                    
+                    <!-- SOSMED LIST -->
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div style="background: #0d0e12; padding: 15px; border-radius: 8px; border-left: 4px solid #25d366;">
+                            <strong style="color: #25d366;">🟢 WhatsApp Official</strong>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-top: 5px;">+62 882 0061 63270</p>
+                        </div>
+                        <div style="background: #0d0e12; padding: 15px; border-radius: 8px; border-left: 4px solid var(--secondary-neon);">
+                            <strong style="color: var(--secondary-neon);">📸 Instagram</strong>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-top: 5px;">muhamadaguspratama</p>
+                        </div>
+                        <div style="background: #0d0e12; padding: 15px; border-radius: 8px; border-left: 4px solid #5865F2;">
+                            <strong style="color: #5865F2;">👾 Discord Community</strong>
+                            <p style="font-size: 14px; color: var(--text-muted); margin-top: 5px;">discord.gg/saguqt</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kanan: Form Kirim Pesan / Feedback -->
+            <div class="right-column">
+                <div class="panel">
+                    <h3>Kirim Pesan Langsung</h3>
+                    <form id="formKontak" style="margin-top: 15px;">
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-size: 14px; color: var(--text-muted); display:block; margin-bottom: 5px;">Nama Lu</label>
+                            <input type="text" id="contactName" placeholder="Masukkan nama lu" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-size: 14px; color: var(--text-muted); display:block; margin-bottom: 5px;">Nomor WhatsApp / Email</label>
+                            <input type="text" id="contactHub" placeholder="Contoh: 0812xxx atau email" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 15px;">
+                            <label style="font-size: 14px; color: var(--text-muted); display:block; margin-bottom: 5px;">Pesan / Masalah Lu</label>
+                            <!-- Menggunakan input teks besar gahar sesuai CSS -->
+                            <input type="text" id="contactMessage" placeholder="Tulis kendala lu di sini, Bang..." style="padding-bottom: 60px;" required>
+                        </div>
+                        
+                        <button type="submit" class="btn-order">Kirim Pesan 🚀</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- MODAL LOGIN WEB -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 style="margin-bottom: 20px; color: var(--primary-neon);">Login Akun</h2>
+            <form id="formLogin">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label>Email / Username</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit" class="btn-order">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 saguqt.id. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

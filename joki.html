@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joki Magic Chess Go Go | saguqt.id</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            <a href="index.html">✨ saguqt.id</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="topup.html?game=mlbb">Top Up Diamond</a></li>
+            <li><a href="joki.html">Joki Magic Chess</a></li>
+            <li><a href="jb-akun.html">Jual Beli Akun</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="#" class="btn-login" id="loginBtn">Login</a></li>
+        </ul>
+    </nav>
+
+    <main class="container" style="margin-top: 40px;">
+        <div class="topup-container">
+            
+            <div class="left-column">
+                <div class="panel">
+                    <img src="mcgg.jpg" alt="Joki MCGG" style="width:100%; border-radius:10px; margin-bottom:15px;">
+                    <h2>Joki Pangkat Magic Chess Go Go</h2>
+                    <p style="font-size: 14px; color: var(--text-muted); margin-top: 10px;">
+                        Mau naik rank cepat tanpa pusing ketemu tim beban atau bot? Joki di saguqt.id aja! Proses cepat, amanah, dan dikerjakan oleh Pro Player berpengalaman. 100% garansi akun aman.
+                    </p>
+                </div>
+            </div>
+
+            <div class="right-column">
+                
+                <div class="panel" style="margin-bottom: 20px;">
+                    <h3>1. Lengkapi Data Akun Joki</h3>
+                    <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                        <div>
+                            <label style="font-size: 14px; color: var(--text-muted);">Email / No HP</label>
+                            <input type="text" id="jokiEmail" placeholder="Contoh: 081234xxx" required>
+                        </div>
+                        <div>
+                            <label style="font-size: 14px; color: var(--text-muted);">Password</label>
+                            <input type="password" id="jokiPassword" placeholder="Password Akun" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label style="font-size: 14px; color: var(--text-muted);">Login Via</label>
+                        <input type="text" id="jokiLoginVia" placeholder="Moonton / TikTok / Facebook / Google" required>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>2. Pilih Paket Rank</h3>
+                    <div class="grid-nominal">
+                        <div class="nominal-item" onclick="selectNominal(this, 'Joki Warrior ke Master', 'Rp 30.000')">
+                            <strong>Warrior ➔ Master</strong><br>
+                            <small>Rp 30.000</small>
+                        </div>
+                        <div class="nominal-item" onclick="selectNominal(this, 'Joki Master ke Grandmaster', 'Rp 50.000')">
+                            <strong>Master ➔ GM</strong><br>
+                            <small>Rp 50.000</small>
+                        </div>
+                        <div class="nominal-item" onclick="selectNominal(this, 'Joki Grandmaster ke Epic', 'Rp 80.000')">
+                            <strong>GM ➔ Epic</strong><br>
+                            <small>Rp 80.000</small>
+                        </div>
+                        <div class="nominal-item" onclick="selectNominal(this, 'Joki Epic ke Legend', 'Rp 120.000')">
+                            <strong>Epic ➔ Legend</strong><br>
+                            <small>Rp 120.000</small>
+                        </div>
+                        <div class="nominal-item" onclick="selectNominal(this, 'Joki Legend ke Mythic', 'Rp 200.000')">
+                            <strong>Legend ➔ Mythic</strong><br>
+                            <small>Rp 200.000</small>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-order" onclick="processJokiOrder()">Pesan Joki Sekarang</button>
+
+            </div>
+        </div>
+    </main>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 style="margin-bottom: 20px; color: var(--primary-neon);">Login Akun</h2>
+            <form id="formLogin">
+                <div class="form-group" style="margin-bottom: 15px;">
+                    <label>Email / Username</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label>Password</label>
+                    <input type="password" required>
+                </div>
+                <button type="submit" class="btn-order">Masuk</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 saguqt.id. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
