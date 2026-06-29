@@ -28,7 +28,7 @@ body {
 }
 
 /* =======================================================
-   NAVIGASI & LOGIN - TAMPILAN ASLI LAPTOP
+   NAVIGASI & LOGIN - TAMPILAN ASLI LAPTOP (MEGAH & LEBAR)
    ======================================================= */
 nav {
     display: flex;
@@ -75,7 +75,6 @@ nav {
     transform: scale(1.05);
 }
 
-/* FIXING TOMBOL LOGIN BIAR KOKOH & GAK ANCUR */
 .btn-login {
     display: inline-block;
     background: var(--primary-neon) !important;
@@ -94,11 +93,10 @@ nav {
     background: var(--secondary-neon) !important;
     color: #fff !important;
     box-shadow: 0 0 15px var(--secondary-neon) !important;
-    transform: scale(1.05);
 }
 
 /* =======================================================
-   KONTEN UTAMA LAPTOP (NORMAL & MEGAH)
+   KONTEN UTAMA LAPTOP
    ======================================================= */
 .hero {
     text-align: center;
@@ -138,7 +136,6 @@ nav {
     letter-spacing: 2px;
 }
 
-/* Grid Game */
 .grid-games {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -157,33 +154,20 @@ nav {
     display: block;
 }
 
-.game-card:hover {
-    transform: translateY(-8px);
-    border-color: var(--primary-neon);
-    box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-}
-
 .game-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     filter: brightness(0.85);
-    transition: 0.3s;
-}
-
-.game-card:hover img {
-    filter: brightness(1);
 }
 
 .game-card h4 {
     font-family: var(--font-graffiti);
     font-size: 18px;
     padding: 15px 10px;
-    letter-spacing: 1px;
     color: #fff;
 }
 
-/* Topup Container */
 .topup-container {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -197,17 +181,6 @@ nav {
     border: 2px solid #252936;
 }
 
-.panel h2, .panel h3 {
-    font-family: var(--font-graffiti);
-    color: var(--primary-neon);
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
 .form-group input {
     width: 100%;
     padding: 14px;
@@ -215,17 +188,8 @@ nav {
     border: 2px solid #252936;
     border-radius: 8px;
     color: #fff;
-    font-size: 16px;
-    outline: none;
-    transition: 0.3s;
 }
 
-.form-group input:focus {
-    border-color: var(--secondary-neon);
-    box-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
-}
-
-/* Grid Nominal */
 .grid-nominal {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -237,33 +201,7 @@ nav {
     border: 2px solid #252936;
     padding: 20px 15px;
     border-radius: 8px;
-    cursor: pointer;
     text-align: center;
-    transition: all 0.2s ease;
-}
-
-.nominal-item strong {
-    font-size: 16px;
-    color: #fff;
-    display: block;
-}
-
-.nominal-item small {
-    color: var(--primary-neon);
-    font-weight: bold;
-    display: block;
-    margin-top: 5px;
-}
-
-.nominal-item:hover {
-    border-color: var(--primary-neon);
-    background: #121824;
-}
-
-.nominal-item.active {
-    border-color: var(--secondary-neon);
-    background: #1c121a;
-    box-shadow: 0 0 10px rgba(255, 0, 85, 0.2);
 }
 
 .btn-order {
@@ -275,33 +213,7 @@ nav {
     padding: 16px;
     border-radius: 8px;
     font-size: 22px;
-    letter-spacing: 2px;
     cursor: pointer;
-    margin-top: 20px;
-    box-shadow: 0 4px 15px rgba(255, 0, 85, 0.4);
-    transition: 0.2s;
-}
-
-/* Modal & Footer */
-.modal {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.85);
-    backdrop-filter: blur(5px);
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-
-.modal-content {
-    background: var(--panel-bg);
-    border: 3px solid var(--primary-neon);
-    padding: 40px 30px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 400px;
-    position: relative;
 }
 
 footer {
@@ -315,69 +227,62 @@ footer {
 
 
 /* =======================================================
-   KODE OTOMATIS KHUSUS HP (TIDAK AKAN MERUSAK LAPTOP)
+   KODE KHUSUS HP - SAKTI 1 BARIS (ANTI MERUSAK LAPTOP)
    ======================================================= */
 @media (max-width: 768px) {
+    
+    /* Navigasi dipaksa jadi 1 baris horizontal rapi */
     nav {
-        flex-direction: column; 
-        padding: 15px 10px;      
-        gap: 12px;               
-    }
-    
-    .logo a {
-        font-size: 26px;         
-        text-shadow: 2px 2px 0px var(--secondary-neon);
-    }
-    
-    .nav-links {
-        flex-wrap: wrap;         
-        justify-content: center; 
-        gap: 15px;              
-    }
-
-    .nav-links a {
-        font-size: 15px;         
-    }
-
-    /* Penyesuaian Tombol Login Khusus Layar HP */
-    .btn-login {
-        padding: 6px 18px !important;       
-        font-size: 14px !important;   
-        margin-top: 5px;      
-    }
-
-    .hero {
-        padding: 40px 15px;
-    }
-
-    .hero h1 { 
-        font-size: 2.0rem;      
-    }
-
-    .topup-container { 
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .panel {
-        padding: 20px;           
-    }
-
-    .grid-games {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
-        gap: 15px;
-    }
-
-    .game-card img {
-        height: 140px;           
-    }
-
-    .grid-nominal {
-        grid-template-columns: repeat(auto-fill, minmax(115px, 1fr)); 
+        flex-direction: row;        /* Tetap menyamping */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;          /* Lebih tipis dan pas */
         gap: 10px;
     }
-
-    .nominal-item {
-        padding: 12px 5px;       
+    
+    /* Perkecil ukuran Logo khusus di HP */
+    .logo a {
+        font-size: 18px;            /* Di-press biar ga menonjol sendirian */
+        text-shadow: 2px 2px 0px var(--secondary-neon);
+        letter-spacing: 0.5px;
     }
+    
+    /* Menu link dibuat menyamping dan bisa di-scroll ke samping kalau penuh */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 12px;                  /* Jarak antar menu rapat rapi */
+        overflow-x: auto;           /* Solusi sakti: kalau kepanjangan bisa digeser */
+        white-space: nowrap;        /* Mencegah teks menu patah ke bawah */
+        padding: 5px 0;
+        -webkit-overflow-scrolling: touch; /* Biar scroll-nya mulus di iPhone/Android */
+    }
+
+    /* Sembunyikan scrollbar bawaan browser biar estetik */
+    .nav-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Ukuran teks menu di HP */
+    .nav-links a {
+        font-size: 13px;            /* Ukuran ideal untuk baris tunggal */
+        letter-spacing: 0px;
+    }
+
+    /* Tombol login dibuat mini dan presisi */
+    .btn-login {
+        padding: 4px 10px !important;       
+        font-size: 11px !important;   
+        border-radius: 4px;
+    }
+
+    /* Konten Pendukung Lainnya di HP */
+    .hero { padding: 35px 15px; }
+    .hero h1 { font-size: 1.8rem; }
+    .topup-container { grid-template-columns: 1fr; gap: 15px; }
+    .panel { padding: 15px; }
+    .grid-games { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 12px; }
+    .game-card img { height: 130px; }
+    .grid-nominal { grid-template-columns: repeat(auto-fill, minmax(105px, 1fr)); gap: 8px; }
+    .nominal-item { padding: 10px 4px; }
 }
